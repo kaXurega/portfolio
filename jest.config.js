@@ -5,8 +5,8 @@ const createJestConfig = nextJest({
 });
 
 const customJestConfig = {
-  roots: ['<rootDir>/src'],
-  moduleDirectories: ['node_modules', '<rootDir>/'],
+  roots: ['<rootDir>/'],
+  moduleDirectories: ['node_modules', '<rootDir>/src'],
   testEnvironment: 'jest-environment-jsdom',
   collectCoverageFrom: [
     '!**/_*.tsx',
@@ -16,6 +16,8 @@ const customJestConfig = {
     '!**/coverage/**',
     '!**/public/**',
     '!**/__tests__/**',
+    '!**/*rc',
+    '!**/*.json',
   ],
 };
 
